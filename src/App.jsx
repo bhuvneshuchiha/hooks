@@ -6,7 +6,11 @@ function App() {
   
 
   return  <div>
-    <Todos title = "Go to the gym" description = "Stay fit for the rest of the year" completed = "false"></Todos>
+    {todos.map((todo) => {
+      return <div key = {todo.id}>
+        <Todos title = {todo.title} description = {todo.description} completed = {todo.completed}></Todos>
+      </div>
+    })}
   </div>
 }
 
